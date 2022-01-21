@@ -1,0 +1,19 @@
+@import "../../common/colors.scss";
+.header {
+    background-color:black;
+    height:72px;
+    padding:0px 40 px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    color: beige;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 40px;
+}
+.log-image,.log-image img{
+    width: 90px;
+    height: 72px;
+}
