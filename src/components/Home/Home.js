@@ -2,21 +2,24 @@ import React, { useEffect } from "react";
 import MovieListing from "../MovieListing/MovieListing";
 
 import { useDispatch } from "react-redux";
-import {  fetchAsyncMovies, fetchAsyncShows } from "../../features/movies/movieSlice";
+import {
+  fetchAsyncMovies,
+  fetchAsyncShows,
+} from "../../features/movies/movieSlice";
 const Home = () => {
-   
-    const dispatch = useDispatch();
-    useEffect(() => {
-
-  dispatch(fetchAsyncMovies());
-  dispatch(fetchAsyncShows());
-}, [dispatch]);
-return(
+  const dispatch = useDispatch();
+  const movieText = "Heart";
+  const showText = "baby";
+  useEffect(() => {
+    dispatch(fetchAsyncMovies(movieText));
+    dispatch(fetchAsyncShows(showText));
+  }, [dispatch]);
+  return (
     <div>
-        <div className="banner-img"></div>
-        <MovieListing />
+      <div className="banner-img"></div>
+      <MovieListing />
     </div>
-);
+  );
 };
 
 export default Home;

@@ -6,7 +6,9 @@ const foot = () => {
        <div className='footer'>
            <div>Imdb Movie App</div>
            <div>©2022, TECHDOME IMDB Inc.</div>
+    
        </div>
+       //company name for clearance
     );
 };
 

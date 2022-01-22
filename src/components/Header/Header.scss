@@ -17,3 +17,21 @@
     width: 90px;
     height: 72px;
 }
+.search-bar{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+    form{
+        display: flex;
+        justify-content: center;
+        width: 70%;
+
+        button {
+            padding: 0px 8px ;
+            font-size: 25px;
+            cursor: pointer;
+            height: 38 px;
+        }
+    }
+}
