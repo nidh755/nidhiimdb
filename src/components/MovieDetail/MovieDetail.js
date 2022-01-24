@@ -14,11 +14,11 @@ const MovieDetail = () => {
   const { imdbID } = useParams();
   const dispatch = useDispatch();
   const data = useSelector(getSelectedMovieOrShow);
-  console.log(data);
+  console.log(imdbID);
   useEffect(() => {
     dispatch(fetchAsyncMovieOrShowDetail(imdbID));
     return () => {
-      dispatch(removeSelectedMovieOrShow());
+      dispatch(removeSelectedMovieOrShow(imdbID));
     };
   }, [dispatch, imdbID]);
   return (
@@ -72,7 +72,7 @@ const MovieDetail = () => {
                 <span>{data.Actors}</span>
               </div>
               <div>
-                <span>Generes</span>
+                <span>Genre</span>
                 <span>{data.Genre}</span>
               </div>
               <div>
